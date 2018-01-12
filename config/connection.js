@@ -9,7 +9,7 @@ else{
   con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "NotForYou",
+    password: "Myfavri0te21",
     database: "ticketMaster"
   })
 }
