@@ -15,11 +15,3 @@ function addUser(userName, password, cb, res){
 }
 
 module.exports = addUser;
-<<<<<<< HEAD
-=======
-
-// Sign-up page added
-// npm install bcrypt
-// user-routes updated
-// log-in.js updated
->>>>>>> b9b79f7204827ddcdcb86ffeab6380a01a51056a
