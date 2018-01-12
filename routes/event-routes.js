@@ -19,9 +19,15 @@ module.exports = function(app) {
     twitter(cb, req.params.keyWord, res);
   });
 
+  app.get("/api/userEvents", function(req, res) {
+    db.selectUserEvents(cb, res);
+  });
+
   app.post("/api/insertEvent/:accountName/:eventName/:location/:time", function(req, res) {
     db.selectOne(req.params.accountName, req.params.eventName, req.params.location, req.params.time);
   });
+
+
 
   //Implement Later
   app.delete("/delete", function(req, res) {
