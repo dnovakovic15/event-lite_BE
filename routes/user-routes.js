@@ -1,6 +1,6 @@
 var jwt = require('jsonwebtoken');
 var users = require("../api/log-in.js");
-//var newUser = require("../api/sign-up.js");
+var newUser = require("../api/sign-up.js");
 
 module.exports = function(app) {
   app.post("/api/login", function(req, res) {
