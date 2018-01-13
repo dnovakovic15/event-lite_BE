@@ -34,10 +34,10 @@ let orm = {
         });
     },
 
-    insertOne: function(tableName, accountName, title, organizer, short_desc, full_desc, event_date, event_time, event_address, eventLinkPic, eventCategoryOne, eventCategoryTwo, cb){
-        let sql = 'INSERT INTO ?? (account_name, title, organizer, short_desc, full_desc, event_date, event_time, event_address, eventLinkPic, eventCategoryOne, eventCategoryTwo) VALUES (?)'
+    insertOne: function(tableName, accountName, title, organizer, short_desc, full_desc, event_date, event_address, eventLinkPic, eventCategoryOne, eventCategoryTwo, cb){
+        let sql = 'INSERT INTO ?? (account_name, title, organizer, short_desc, full_desc, event_date, event_address, eventLinkPic, eventCategoryOne, eventCategoryTwo) VALUES (?)'
 
-        con.query(sql, [tableName ,accountName, title, organizer, short_desc, full_desc, event_date, event_time, event_address, eventLinkPic, eventCategoryOne, eventCategoryTwo], function (err, result) {
+        con.query(sql, [tableName ,accountName, title, organizer, short_desc, full_desc, event_date, event_address, eventLinkPic, eventCategoryOne, eventCategoryTwo], function (err, result) {
             if (err) throw err;
             
             if(cb){

@@ -27,11 +27,10 @@ module.exports = function(app) {
     db.selectUserEvents(cb, req.params.username, res);
   });
 
-  app.post("/api/insertEvent/:accountName/:eventName/:location/:time", function(req, res) {
-    db.selectOne(req.params.accountName, req.params.eventName, req.params.location, req.params.time);
+  app.post("/api/insertEvent", function(req, res) {
+    let dateTime = req.body.date + ' ' + req.body.time;
+    db.selectOne('root', req.body.title, req.body.organizer, req.body.short, req.body.long, dateTime, req.body.address, req.body.pic, request.body.category1, request.body.category2);
   });
-
-
 
   //Implement Later
   app.delete("/delete", function(req, res) {
