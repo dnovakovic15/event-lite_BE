@@ -13,6 +13,12 @@ let events = {
         }
     },
 
+    // selectUser: function(cb, username, res){
+    //     if(cb){
+    //         orm.selectUser('events', username, cb, res);
+    //     }
+    // },
+
     insertOne: function(accountName, eventName, location, time){
         return orm.insertOne('events', accountName, eventName, location, time);
     },
@@ -20,6 +26,8 @@ let events = {
     updateOne: function(burgerName){
         return orm.updateOne('events', 'devoured', 1, 'burger_name', burgerName);
     }
+
+
 }
 
 module.exports = events;
