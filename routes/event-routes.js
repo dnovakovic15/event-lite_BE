@@ -27,9 +27,9 @@ module.exports = function(app) {
   //   db.selectUserEvents(cb, req.params.username, res);
   // });
 
-  app.get("/api/userEvents/:username", function(req, res) {
-    db.selectUserEvents(cb, req.params.username, res);
-  });
+    app.get("/api/userEvents/:account_name", function(req, res) {
+      db.selectUserEvents(cb, req.params.account_name, res);
+    });
 
   app.post("/api/insertEvent/:accountName/:eventName/:location/:time", function(req, res) {
     db.selectOne(req.params.accountName, req.params.eventName, req.params.location, req.params.time);
