@@ -57,22 +57,22 @@ let orm = {
                 cb(result);
             }
         });
-    }
+    },
 
-    // selectUser: function(tableName, username, cb, res){
-    //     let sql = 'SELECT * FROM ?? WHERE account_name=' + username
+    selectUser: function(tableName, username, cb, res){
+        let sql = 'SELECT * FROM ?? WHERE account_name=' + username
 
-    //     con.query(sql, [tableName], function (err, result) {
-    //         if (err) throw err;
+        con.query(sql, [tableName], function (err, result) {
+            if (err) throw err;
 
-    //         if(cb){
-    //             cb(result, res);
-    //         }
-    //         else{
-    //             return result;
-    //         }
-    //     });
-    // },
+            if(cb){
+                cb(result, res);
+            }
+            else{
+                return result;
+            }
+        });
+    },
 };
 
 module.exports = orm;
