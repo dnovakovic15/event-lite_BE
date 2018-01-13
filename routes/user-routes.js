@@ -34,6 +34,8 @@ module.exports = function(app) {
     // to the API (e.g. in case you use sessions)
     res.setHeader('Access-Control-Allow-Credentials', true);
 
+    res.send('true');
+    
     newUser(req.body.username, req.body.password, cb, res);
   });
 
