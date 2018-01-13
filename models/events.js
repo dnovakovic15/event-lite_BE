@@ -19,8 +19,8 @@ let events = {
         }
     },
 
-    insertOne: function(accountName, eventName, location, time){
-        return orm.insertOne('events', accountName, eventName, location, time);
+    insertOne: function(accountName, title, organizer, short_desc, full_desc, event_date, event_time, event_address, eventLinkPic, eventCategoryOne, eventCategoryTwo){
+        return orm.insertOne('events', accountName, title, organizer, short_desc, full_desc, event_date, event_time, event_address, eventLinkPic, eventCategoryOne, eventCategoryTwo);
     },
 
     updateOne: function(burgerName){
