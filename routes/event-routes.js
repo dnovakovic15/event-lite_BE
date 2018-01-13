@@ -28,6 +28,21 @@ module.exports = function(app) {
   });
 
   app.post("/api/insertEvent", function(req, res) {
+// Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', '*');
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+    res.setHeader('Access-Control-Allow-Credentials', true);
+
+    res.send('true');    
+    
     let dateTime = req.body.date + ' ' + req.body.time;
     db.insertOne('root', req.body.title, req.body.organizer, req.body.short, req.body.long, dateTime, req.body.address, req.body.pic, req.body.category1, req.body.category2);
   });
