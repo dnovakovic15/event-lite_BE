@@ -13,11 +13,11 @@ let events = {
         }
     },
 
-    // selectUser: function(cb, username, res){
-    //     if(cb){
-    //         orm.selectUser('events', username, cb, res);
-    //     }
-    // },
+    selectUser: function(cb, username, res){
+        if(cb){
+            orm.selectUser('events', username, cb, res);
+        }
+    },
 
     insertOne: function(accountName, eventName, location, time){
         return orm.insertOne('events', accountName, eventName, location, time);
