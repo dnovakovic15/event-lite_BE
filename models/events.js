@@ -15,7 +15,7 @@ let events = {
 
     selectUser: function(cb, username, res){
         if(cb){
-            orm.selectUser('events', username, cb, res);
+            orm.selectUserEvents('events', username, cb, res);
         }
     },
 
